@@ -1,0 +1,86 @@
+.create-user-form {
+  border: 1px solid var(--color-table-border);
+  background: var(--color-table-surface);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.create-user-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: var(--color-inactive);
+}
+
+.form-select,
+.form-textarea {
+  width: 100%;
+  border: 1px solid var(--color-input-border);
+  background: var(--color-input-background);
+  color: var(--color-foreground);
+  border-radius: 4px;
+  font-family: var(--font-body-family);
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-select {
+  height: 44px;
+  padding: 0 12px;
+}
+
+.form-textarea {
+  padding: 10px 12px;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-input-border-focus);
+}
+
+.form-select:disabled,
+.form-textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.form-error {
+  border: 1px solid var(--color-danger);
+  background: color-mix(in srgb, var(--color-danger) 12%, transparent);
+  color: var(--color-danger);
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.form-error p {
+  margin: 0;
+  font-size: 13px;
+}
+
+@media (max-width: 767px) {
+  .create-user-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,221 @@
+.create-order-form {
+  border: 1px solid var(--color-table-border);
+  background: var(--color-table-surface);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.create-order-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: var(--color-inactive);
+}
+
+.form-select,
+.form-textarea {
+  width: 100%;
+  border: 1px solid var(--color-input-border);
+  background: var(--color-input-background);
+  color: var(--color-foreground);
+  border-radius: 4px;
+  font-family: var(--font-body-family);
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-select {
+  height: 44px;
+  padding: 0 12px;
+}
+
+.form-textarea {
+  padding: 10px 12px;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-input-border-focus);
+}
+
+.handler-input-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.handler-input-row .input-wrapper {
+  margin-bottom: 0;
+}
+
+.handler-picker-button {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-table-action-border);
+  background: transparent;
+  color: var(--color-accent);
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.assign-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.52);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 16px;
+}
+
+.assign-modal {
+  width: min(520px, 100%);
+  max-height: 80vh;
+  border: 1px solid var(--color-table-border);
+  background: var(--color-table-surface);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.assign-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid var(--color-table-border);
+}
+
+.assign-modal-header h2 {
+  margin: 0;
+  font-family: var(--font-title-family);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.assign-modal-header p {
+  margin: 6px 0 0;
+  color: var(--color-inactive);
+  font-size: 13px;
+}
+
+.assign-modal-close {
+  border: none;
+  background: transparent;
+  color: var(--color-foreground);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.assign-modal-close:hover {
+  background: var(--color-table-row-alt);
+}
+
+.assign-modal-state {
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.assign-user-list {
+  overflow-y: auto;
+  padding: 6px;
+}
+
+.assign-user-item {
+  width: 100%;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 6px;
+  color: var(--color-foreground);
+  display: grid;
+  grid-template-columns: 34px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-family: var(--font-body-family);
+}
+
+.assign-user-item:hover {
+  background: var(--color-table-row-alt);
+  border-color: var(--color-table-border);
+}
+
+.assign-user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-primary-button-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-small-size);
+}
+
+.assign-user-name {
+  text-align: left;
+}
+
+.assign-user-meta {
+  color: var(--color-inactive);
+  font-size: 12px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.form-error {
+  border: 1px solid var(--color-danger);
+  background: color-mix(in srgb, var(--color-danger) 12%, transparent);
+  color: var(--color-danger);
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.form-error p {
+  margin: 0;
+  font-size: 13px;
+}
+
+@media (max-width: 767px) {
+  .create-order-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .handler-input-row {
+    align-items: stretch;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}

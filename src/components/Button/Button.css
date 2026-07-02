@@ -1,0 +1,94 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  min-width: 88px;
+  transition:
+    background-color 100ms ease-out,
+    color 100ms ease-out;
+  font-family: var(--font-body-family);
+  cursor: pointer;
+}
+
+.btn.icon-only {
+  padding: 0.5rem;
+  min-width: 0;
+}
+
+@keyframes btn-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-spinner {
+  animation: btn-spin 0.75s linear infinite;
+}
+
+.btn.primary {
+  background-color: var(--color-accent);
+  color: var(--color-primary-button-text);
+  border: none;
+}
+
+.btn.primary:disabled {
+  background-color: var(--color-inactive);
+  cursor: not-allowed;
+}
+
+.btn.primary:hover {
+  background-color: var(--color-primary-button-hover);
+}
+
+.btn.primary:active {
+  background-color: var(--color-primary-button-active);
+}
+
+.btn.secondary {
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  background-color: transparent;
+}
+
+.btn.secondary:hover {
+  color: var(--color-foreground);
+  background-color: var(--color-secondary-button-hover);
+}
+
+.btn.secondary:active {
+  color: var(--color-foreground);
+  background-color: var(--color-secondary-button-active);
+}
+
+.btn.secondary:disabled {
+  color: var(--color-inactive);
+  border-color: var(--color-inactive);
+  cursor: not-allowed;
+}
+
+.btn.tertiary:disabled {
+  color: var(--color-inactive);
+  cursor: not-allowed;
+}
+
+.btn.tertiary {
+  color: var(--color-accent);
+  background-color: transparent;
+  border: none;
+}
+
+.btn.tertiary:hover {
+  background-color: var(--color-tertiary-button-hover);
+  color: var(--color-foreground);
+}
+
+.btn.tertiary:active {
+  background-color: var(--color-tertiary-button-active);
+  color: var(--color-foreground);
+}

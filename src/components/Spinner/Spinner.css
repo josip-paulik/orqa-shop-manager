@@ -1,0 +1,4 @@
+.btn-spinner {
+  animation: btn-spin 0.75s linear infinite;
+  color: var(--color-accent);
+}

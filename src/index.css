@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "Michroma";
+  src: url("/fonts/Michroma/Michroma-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Quantico";
+  src: url("/fonts/Quantico/Quantico-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Quantico";
+  src: url("/fonts/Quantico/Quantico-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Quantico";
+  src: url("/fonts/Quantico/Quantico-Italic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Quantico";
+  src: url("/fonts/Quantico/Quantico-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+:root {
+  /* General Colors */
+  --color-background: #0d0e10;
+  --color-foreground: #f7f7f8;
+  --color-accent: #ee3135;
+  --color-warning: #fbbf24;
+  --color-danger: #f87171;
+  --color-incoming: #fde047;
+  --color-info: #60a5fa;
+  --color-success: #4ade80;
+  --color-inactive: #6b7280;
+
+  /* Button Colors */
+  --color-primary-button-hover: #8c1d1f;
+  --color-primary-button-active: #330a0b;
+  --color-primary-button-text: #f7f7f8;
+  --color-secondary-button-hover: #ee31341a;
+  --color-secondary-button-active: #ee31346c;
+  --color-tertiary-button-hover: #ee31341a;
+  --color-tertiary-button-active: #ee31346c;
+
+  /* Input Colors */
+  --color-input-border: #f7f7f810;
+  --color-input-background: #f7f7f804;
+  --color-input-icon: var(--color-inactive);
+  --color-input-border-hover: #e19a9c;
+  --color-input-border-active: #e1565a;
+  --color-input-border-focus: var(--color-accent);
+
+  /* Table / Grid Colors */
+  --color-table-surface: #131519;
+  --color-table-border: #f7f7f814;
+  --color-table-row-border: #f7f7f80d;
+  --color-table-row-alt: #f7f7f803;
+  --color-table-header-bg: #f076791a;
+  --color-table-header-text: var(--color-accent);
+  --color-table-action-border: #f7f7f833;
+  --color-table-action-text: #f7f7f8bf;
+  --color-table-handler-bg: #131519cc;
+  --color-table-view-border: #f7f7f833;
+  --color-table-status-info-bg: #60a5fa26;
+  --color-table-status-incoming-bg: #fde04726;
+  --color-table-status-success-bg: #4ade8026;
+  --color-table-status-danger-bg: #f8717126;
+
+  /* Dashboard Surface Colors */
+  --color-surface-primary: #131519;
+  --color-surface-border: #f7f7f814;
+  --color-surface-border-strong: #f7f7f81f;
+  --color-topbar-muted: #f7f7f873;
+  --color-nav-active-bg: #ee31351a;
+  --color-logo-gradient-start: #1a1d22;
+  --color-logo-gradient-end: #0d0e10;
+
+  /* Card Colors */
+  --color-card-background: #13151915;
+  --color-card-border: #f7f7f814;
+
+  /* Font Families and Sizes */
+  --font-title-family: "Michroma", sans-serif;
+  --font-body-family: "Quantico", sans-serif;
+  --font-h1-size: 48px;
+  --font-h2-size: 36px;
+  --font-h3-size: 24px;
+  --font-body-size: 16px;
+  --font-small-size: 12px;
+}
+
+[data-theme="light"] {
+  /* General Colors */
+  --color-background: #f4f5f8;
+  --color-foreground: #121418;
+  --color-accent: #c6282d;
+  --color-warning: #b27a00;
+  --color-danger: #c0392b;
+  --color-incoming: #9a7c00;
+  --color-info: #1d5fae;
+  --color-success: #1e8f53;
+  --color-inactive: #5b6675;
+
+  /* Button Colors */
+  --color-primary-button-hover: #9f1e23;
+  --color-primary-button-active: #7e171b;
+  --color-primary-button-text: #f4f5f8;
+  --color-secondary-button-hover: #c6282d14;
+  --color-secondary-button-active: #c6282d2e;
+  --color-tertiary-button-hover: #c6282d14;
+  --color-tertiary-button-active: #c6282d2e;
+
+  /* Input Colors */
+  --color-input-border: #1f29371f;
+  --color-input-background: #ffffff;
+  --color-input-icon: #5b6675;
+  --color-input-border-hover: #924043;
+  --color-input-border-active: #9a3a3d;
+  --color-input-border-focus: var(--color-accent);
+
+  /* Table / Grid Colors */
+  --color-table-surface: #ffffff;
+  --color-table-border: #1f29371f;
+  --color-table-row-border: #1f293714;
+  --color-table-row-alt: #1f293708;
+  --color-table-header-bg: #c6282d14;
+  --color-table-header-text: #a11f24;
+  --color-table-action-border: #1f293733;
+  --color-table-action-text: #334155;
+  --color-table-handler-bg: #f3f5f8;
+  --color-table-view-border: #1f293733;
+  --color-table-status-info-bg: #1d5fae1f;
+  --color-table-status-incoming-bg: #9a7c001f;
+  --color-table-status-success-bg: #1e8f531f;
+  --color-table-status-danger-bg: #c0392b1f;
+
+  /* Dashboard Surface Colors */
+  --color-surface-primary: #ffffff;
+  --color-surface-border: #1f29371f;
+  --color-surface-border-strong: #1f293733;
+  --color-topbar-muted: #5b6675;
+  --color-nav-active-bg: #c6282d14;
+  --color-logo-gradient-start: #f5f7fa;
+  --color-logo-gradient-end: #eef1f6;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body-family);
+  font-size: var(--font-body-size);
+  margin: 0;
+  padding: 0;
+}
