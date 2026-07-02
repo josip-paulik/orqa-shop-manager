@@ -35,7 +35,7 @@ function OrderFormPage() {
   } = useAppSelector(selectUsersState);
   const isEditMode = Boolean(resolvedOrderId);
   const [customer, setCustomer] = useState("");
-  const [handler, setHandler] = useState("");
+  const [handler, setHandler] = useState<string | null>(null);
   const [amountInput, setAmountInput] = useState("");
   const [status, setStatus] = useState<OrderStatus>("In Progress");
   const [receipt, setReceipt] = useState("");
@@ -194,11 +194,9 @@ function OrderFormPage() {
             <div className="handler-input-row">
               <Input
                 id="handler"
-                value={handler}
-                onChange={(event) => setHandler(event.target.value)}
+                value={handler ?? "Not Assigned"}
                 disabled={true}
-                required
-                placeholder="Assigned person(choose with right button)"
+                placeholder="Not Assigned"
               />
               <button
                 type="button"

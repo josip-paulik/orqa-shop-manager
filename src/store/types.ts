@@ -3,7 +3,7 @@ export type OrderStatus = "In Progress" | "Incoming" | "Deployed" | "Cancelled";
 export type Order = {
   id: string;
   customer: string;
-  handler: string;
+  handler: string | null;
   initials: string;
   date: string;
   status: OrderStatus;

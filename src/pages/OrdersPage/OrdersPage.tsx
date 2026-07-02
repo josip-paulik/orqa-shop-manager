@@ -206,7 +206,7 @@ function OrdersPage() {
 							<div role="cell">{order.id}</div>
 							<div role="cell">{order.customer}</div>
 							<div role="cell" className="handler-cell">
-                {order.handler === 'Not Assigned' ? (
+				{!order.handler ? (
                     <div className="handler-name">
                         <WarningCircle size={28} className="handler-warning" />
                         <span className="handler-unassigned">Not Assigned</span>
@@ -214,7 +214,7 @@ function OrdersPage() {
                 ) : (
                     <div className="handler-name">
                         <span className="handler-avatar">{order.initials}</span>
-                        <span>{order.handler}</span>
+						<span>{order.handler}</span>
                     </div>
                 )}
 								<Button
@@ -288,8 +288,8 @@ function OrdersPage() {
 									<CaretDown size={14} className="status-select-chevron" />
 								</div>
 							</div>
-              <div className="order-card-row handler-cell">
-                {order.handler === 'Not Assigned' ? (
+			  <div className="order-card-row handler-cell">
+				{!order.handler ? (
                     <div className="handler-name">
                         <WarningCircle size={28} className="handler-warning" />
                         <span className="handler-unassigned">Not Assigned</span>
@@ -297,7 +297,7 @@ function OrdersPage() {
                 ) : (
                     <div className="handler-name">
                         <span className="handler-avatar">{order.initials}</span>
-                        <span>{order.handler}</span>
+						<span>{order.handler}</span>
                     </div>
                 )}
 								<Button

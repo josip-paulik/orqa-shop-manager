@@ -30,7 +30,7 @@ const mockOrders: Order[] = [
   {
     id: "#2845",
     customer: "Lucas Weber",
-    handler: "Not Assigned",
+    handler: null,
     initials: "",
     date: "Jun 27, 2026",
     status: "Incoming",
@@ -138,7 +138,7 @@ const fetchUsersRequest = async () =>
 
 export type CreateOrderInput = {
   customer: string;
-  handler: string;
+  handler: string | null;
   amount: number;
   status: OrderStatus;
   receipt: string;
@@ -147,7 +147,7 @@ export type CreateOrderInput = {
 export type UpdateOrderInput = {
   id: string;
   customer: string;
-  handler: string;
+  handler: string | null;
   amount: number;
   status: OrderStatus;
   receipt: string;
@@ -175,8 +175,8 @@ type CreateOrderResult = {
   orders: Order[];
 };
 
-const getHandlerInitials = (handler: string) => {
-  if (handler === "Not Assigned") {
+const getHandlerInitials = (handler: string | null) => {
+  if (!handler) {
     return "";
   }
 

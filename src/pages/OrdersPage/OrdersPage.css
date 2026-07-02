@@ -81,12 +81,6 @@
   color: var(--color-accent);
 }
 
-.status-select-wrap {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-}
-
 .status-select {
   appearance: none;
   background: transparent;
